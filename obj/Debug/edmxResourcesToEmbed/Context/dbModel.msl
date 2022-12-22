@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CDExcellentModelStoreContainer" CdmEntityContainer="CDExcellentEntities1">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="CDExcellentModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="CDExcellentModel.Account">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AddAreas">
+      <EntityTypeMapping TypeName="CDExcellentModel.AddArea">
+        <MappingFragment StoreEntitySet="AddAreas">
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="DistributorQty" ColumnName="DistributorQty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AddArticles">
+      <EntityTypeMapping TypeName="CDExcellentModel.AddArticle">
+        <MappingFragment StoreEntitySet="AddArticles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Creator" ColumnName="Creator" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AddDistributors">
+      <EntityTypeMapping TypeName="CDExcellentModel.AddDistributor">
+        <MappingFragment StoreEntitySet="AddDistributors">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AddNewUsers">
+      <EntityTypeMapping TypeName="CDExcellentModel.AddNewUser">
+        <MappingFragment StoreEntitySet="AddNewUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="ReportTo" ColumnName="ReportTo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AddQuestionnaires">
+      <EntityTypeMapping TypeName="CDExcellentModel.AddQuestionnaire">
+        <MappingFragment StoreEntitySet="AddQuestionnaires">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CreateNotifications">
+      <EntityTypeMapping TypeName="CDExcellentModel.CreateNotification">
+        <MappingFragment StoreEntitySet="CreateNotifications">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Staff" ColumnName="Staff" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CreatePlanVisits">
+      <EntityTypeMapping TypeName="CDExcellentModel.CreatePlanVisit">
+        <MappingFragment StoreEntitySet="CreatePlanVisits">
+          <ScalarProperty Name="PlanId" ColumnName="PlanId" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Distributor" ColumnName="Distributor" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="Guest" ColumnName="Guest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CreateTasks">
+      <EntityTypeMapping TypeName="CDExcellentModel.CreateTask">
+        <MappingFragment StoreEntitySet="CreateTasks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Create_by" ColumnName="Create_by" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ChooseCalendar" ColumnName="ChooseCalendar" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestSurveys">
+      <EntityTypeMapping TypeName="CDExcellentModel.RequestSurvey">
+        <MappingFragment StoreEntitySet="RequestSurveys">
+          <ScalarProperty Name="SurveyId" ColumnName="SurveyId" />
+          <ScalarProperty Name="SurveyName" ColumnName="SurveyName" />
+          <ScalarProperty Name="SurveyQuestion" ColumnName="SurveyQuestion" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Get_by" ColumnName="Get_by" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskDetails">
+      <EntityTypeMapping TypeName="CDExcellentModel.TaskDetail">
+        <MappingFragment StoreEntitySet="TaskDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Create_by" ColumnName="Create_by" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Performer" ColumnName="Performer" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisitPlanDetails">
+      <EntityTypeMapping TypeName="CDExcellentModel.VisitPlanDetail">
+        <MappingFragment StoreEntitySet="VisitPlanDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DistributorName" ColumnName="DistributorName" />
+          <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+          <ScalarProperty Name="VisitStatus" ColumnName="VisitStatus" />
+          <ScalarProperty Name="Requestor_by" ColumnName="Requestor_by" />
+          <ScalarProperty Name="PurposeVisit" ColumnName="PurposeVisit" />
+          <ScalarProperty Name="GuestList" ColumnName="GuestList" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

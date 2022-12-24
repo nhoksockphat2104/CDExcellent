@@ -1,0 +1,86 @@
+﻿@model IEnumerable<CDExcellent.Models.AddQuestionnaire>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutDashboardAdmin.cshtml";
+}
+
+<h2 class="container-md">QUẢN LÝ BẢNG CÂU HỎI</h2>
+
+<div class="card text-center">
+    <div class="card-header">
+        <div class="col">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info rounded-circle" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </button>
+                <a href="@Url.Action("Create", "AddQuestionnaire")" class="btn btn-sm btn-info px-3 mx-3 rounded-pill text-white">TẠO MỚI</a>
+            </form>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th></th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Details", "AddQuestionnaire", new { id = item.Id })">@Html.DisplayFor(modelItem => item.Title)</a>
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                    <td>
+                        @if (item.Status == 1)
+                        {
+                            <p @Url.Action("Status", "AddQuestionnaire", new {id = item.Status}) class="text-success">Available</p>
+                        }
+                        else if (item.Status ==2)
+                        {
+                            <p @Url.Action("Status", "AddQuestionnaire", new { id = item.Status }) class="text-danger">Disable</p>
+                        }
+                    </td>
+                </tr>                
+            }
+        </table>
+    </div>
+</div>
+<nav aria-label="Page navigation example" class="">
+    <ul class="pagination justify-content-center mt-3">
+        <li class="page-item">
+            <a class="page-link active" href="#" aria-label="Previous">
+                <span aria-hidden="true">&lt;</span>
+            </a>
+        </li>
+        <li class="page-item" aria-current="page">
+            <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link active" href="#" aria-label="Next">
+                <span aria-hidden="true">&gt;</span>
+            </a>
+        </li>
+    </ul>
+</nav>

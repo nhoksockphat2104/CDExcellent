@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewBag.Title = "DetailsSurvey";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutDashboardAdmin.cshtml";
+}
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb container-md">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "DashboardAdmin")">Home</a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("SurveyList", "RequestSurvey")">Survey List</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Details of the Questionnaire</li>
+    </ol>
+</nav>
+
+<div class="mt-3 container-fluid">
+    <div class="d-flex" style="background-color: lightgray;">
+        <div class="p2 flex-grow-1 mt-5">
+            <h3>KHẢO SÁT - 21/12</h3>
+        </div>
+        <div class="p2">
+            <p>21/12/2022</p>
+            <p class="text-primary">25 câu hỏi</p>
+            <p><input type="checkbox" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Phân nhóm câu hỏi</p>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <p>Câu hỏi 1:</p>
+                        <div class="border">
+                            1. Lorem ipsum dolor sit amet, consectetur adipiscing edlit. Vivamus tempor exvolutpat pharetra aliquet. Crastincidunt telus, in suscipitorci vestibulum sit amet
+                        </div>
+                        <p>Câu trả lời</p>
+                        <p><input type="checkbox" name="checkID" /> Nhiều lựa chọn đúng</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Answer 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Answer 2
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault3">
+                                Answer 3
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault4">
+                                Answer 4
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault5">
+                                Answer 5
+                            </label>
+                        </div>
+                        <a href="#" class="text-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                            </svg> Thêm lựa chọn
+                        </a>
+                        <p>Phân nhóm câu hỏi</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Phần 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Phần 2
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault3">
+                                Phần 3
+                            </label>
+                        </div>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+</svg> Thêm nhóm</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="card container-md mt-3">
+    <div class="d-flex">
+        <div class="p2 flex-grow-1 mt-3">
+            <h5>Phần 1</h5>
+        </div>
+        <div class="p2">           
+            <a href="#" class="btn btn-sm btn-secondary mt-3">Thêm câu hỏi</a>
+        </div>
+    </div>
+    <p class="card-text text-primary ">1. Lorem ipsum dolor sit amet, consectetur adipiscing edlit. Vivamus tempor exvolutpat pharetra aliquet. Crastincidunt telus, in suscipitorci vestibulum sit amet</p>
+    <p><input type="checkbox" name="tickId" /> Answer 1</p>
+    <p><input type="checkbox" name="tickId" /> Answer 2</p>
+    <p><input type="checkbox" name="tickId" /> Answer 3</p>
+    <p><input type="checkbox" name="tickId" /> Answer 4</p>
+    <p><input type="checkbox" name="tickId" /> Answer 5</p>
+    <p class="card-text text-primary">2. Lorem ipsum dolor sit amet, consectetur adipiscing edlit. Vivamus tempor exvolutpat pharetra aliquet. Crastincidunt telus, in suscipitorci vestibulum sit amet</p>
+    <p><input type="checkbox" name="tickId" /> Answer 1</p>
+    <p><input type="checkbox" name="tickId" /> Answer 2</p>
+    <p><input type="checkbox" name="tickId" /> Answer 3</p>
+    <p><input type="checkbox" name="tickId" /> Answer 4</p>
+    <p><input type="checkbox" name="tickId" /> Answer 5</p>
+    <p class="card-text text-primary">3. Lorem ipsum dolor sit amet, consectetur adipiscing edlit. Vivamus tempor exvolutpat pharetra aliquet. Crastincidunt telus, in suscipitorci vestibulum sit amet</p>
+    <p><input type="checkbox" name="tickId" /> Answer 1</p>
+    <p><input type="checkbox" name="tickId" /> Answer 2</p>
+    <p><input type="checkbox" name="tickId" /> Answer 3</p>
+    <p><input type="checkbox" name="tickId" /> Answer 4</p>
+    <p><input type="checkbox" name="tickId" /> Answer 5</p>
+    <p class="card-text text-primary">4. Lorem ipsum dolor sit amet, consectetur adipiscing edlit. Vivamus tempor exvolutpat pharetra aliquet. Crastincidunt telus, in suscipitorci vestibulum sit amet</p>
+    <p><input type="checkbox" name="tickId" /> Answer 1</p>
+    <p><input type="checkbox" name="tickId" /> Answer 2</p>
+    <p><input type="checkbox" name="tickId" /> Answer 3</p>
+    <p><input type="checkbox" name="tickId" /> Answer 4</p>
+    <p><input type="checkbox" name="tickId" /> Answer 5</p>
+    <p class="card-text text-primary">5. Lorem ipsum dolor sit amet, consectetur adipiscing edlit. Vivamus tempor exvolutpat pharetra aliquet. Crastincidunt telus, in suscipitorci vestibulum sit amet</p>
+    <p><input type="checkbox" name="tickId" /> Answer 1</p>
+    <p><input type="checkbox" name="tickId" /> Answer 2</p>
+    <p><input type="checkbox" name="tickId" /> Answer 3</p>
+    <p><input type="checkbox" name="tickId" /> Answer 4</p>
+    <p><input type="checkbox" name="tickId" /> Answer 5</p>
+    <p class="card-text text-primary">6. Lorem ipsum dolor sit amet, consectetur adipiscing edlit. Vivamus tempor exvolutpat pharetra aliquet. Crastincidunt telus, in suscipitorci vestibulum sit amet</p>
+    <p><input type="checkbox" name="tickId" /> Answer 1</p>
+    <p><input type="checkbox" name="tickId" /> Answer 2</p>
+    <p><input type="checkbox" name="tickId" /> Answer 3</p>
+    <p><input type="checkbox" name="tickId" /> Answer 4</p>
+    <p><input type="checkbox" name="tickId" /> Answer 5</p>
+    <p class="card-text text-primary">7. Lorem ipsum dolor sit amet, consectetur adipiscing edlit. Vivamus tempor exvolutpat pharetra aliquet. Crastincidunt telus, in suscipitorci vestibulum sit amet</p>
+    <p><input type="checkbox" name="tickId" /> Answer 1</p>
+    <p><input type="checkbox" name="tickId" /> Answer 2</p>
+    <p><input type="checkbox" name="tickId" /> Answer 3</p>
+    <p><input type="checkbox" name="tickId" /> Answer 4</p>
+    <p><input type="checkbox" name="tickId" /> Answer 5</p>
+</div>

@@ -1,0 +1,63 @@
+﻿@model CDExcellent.Models.RequestSurvey
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutDashboardAdmin.cshtml";
+}
+
+<div class="container-md">
+    <h4>Details Request Survey</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SurveyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SurveyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SurveyQuestion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SurveyQuestion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Get_by)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Get_by)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+    <a href="@Url.Action("Edit", "RequestSurvey",new { id = Model.SurveyId })" class="btn btn-sm btn-success px-3 m-2">Edit</a>
+    <a href="@Url.Action("Index", "RequestSurvey")" class="btn btn-sm btn-dark px-3">Back</a>
+</div>

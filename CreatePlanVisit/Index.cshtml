@@ -1,0 +1,82 @@
+﻿@model IEnumerable<CDExcellent.Models.CreatePlanVisit>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutDashboardAdmin.cshtml";
+}
+
+<h2>Table Manage Plan Visit</h2>
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "DashboardAdmin")">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Table Manage Plan</li>
+    </ol>
+</nav>
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-md-4">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="col-md-6 text-end">
+                <a href="@Url.Action("Create", "CreatePlanVisit")" class="btn btn-group-sm btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg> Create
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th style="width:20px;" class="text-center"><input type="checkbox" name="checkId" /></th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Time)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Distributor)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Purpose)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Guest)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="width:20px" class="text-center"><input type="checkbox" name="checkId" /></td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Time)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Distributor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Purpose)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Guest)
+                    </td>
+                    <td class="text-center">
+                        <a href="@Url.Action("Delete", "CreatePlanVisit", new { @id = item.PlanId})" class="btn btn-sm btn-danger">Delete</a>
+                        <a href="@Url.Action("Details", "CreatePlanVisit", new { @id = item.PlanId})" class="btn btn-sm btn-primary">Details</a>
+                        <a href="@Url.Action("Edit", "CreatePlanVisit", new { @id = item.PlanId})" class="btn btn-sm btn-warning">Edit</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

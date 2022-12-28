@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@Page.Title CDExcellent</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="~/Public/Img/2.png" type="image/x-icon">
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    @RenderSection("head", required: false)
+</head>
+<body>
+    <section class="clearfix card-header">
+        <div class="container-fluid">
+            <nav class="navbar bg-white">
+                <div class="container">
+                    <a class="navbar-brand" href="@Url.Action("Index", "Dashboard")">
+                        <img src="~/Public/Img/2.png" alt="Bootstrap" width="50" height="50">
+                    </a>
+                </div>
+            </nav>
+            @RenderBody()
+        </div>
+    </section>
+
+    <section class="clearfix card-footer bg-light">
+        <div class="container-fluid text-center py-4">
+            Design by: Hoàng Văn Phát
+            <br />Email: PhatHVGCS190614@gmail.com
+        </div>
+    </section>
+    @RenderSection("footer", required: false)
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

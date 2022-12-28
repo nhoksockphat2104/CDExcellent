@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Import";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutDashboardAdmin.cshtml";
+}
+
+<h2>Import User List</h2>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "DashboardAdmin")">Home</a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("Index", "AddNewUser")">Quản lý người dùng</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Import Users</li>
+    </ol>
+</nav>
+
+<div class="container-md">
+    <div class="d-flex">
+        <h4>Select file: </h4>
+        <div class="mb-3">
+            <input class="form-control" type="file" id="formFileMultiple" multiple>
+        </div>
+    </div>
+    <p><input type="checkbox" name="checkId" /> Overwrite on existing user(s)</p>
+    <h4>Select file extension:</h4>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+            From scv (Comma Seperated Value) <a href="#">Download CSV Template</a>
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+        <label class="form-check-label" for="flexRadioDefault2">
+            From xlsx (Excel Workbook) <a href="#">Download Excel Tempalte</a>
+        </label>
+    </div>
+    <a href="@Url.Action("Index", "AddNewUser")" class="btn btn-lg btn-light">Import List</a>
+</div>

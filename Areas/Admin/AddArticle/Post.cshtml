@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Post";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutDashboardAdmin.cshtml";
+}
+
+<h2 class="container-md">ARTICLES</h2>
+
+<div class="card container-md">
+    <div class="card mb-3 container-md mt-3" style="width: 1000px; height:340px">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <h4 class="mt-lg-5 text-secondary text-center">Input your image</h4>
+                <input type="file" class="btn btn-sm btn-primary form-control mt-2" id="inputGroupFile02">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <form class="form-floating">
+                        <input type="text" class="form-control card-title">
+                        <label for="floatingInputValue">Title</label>
+                    </form>
+                    <form class="form-floating">
+                        <input type="text" class="form-control card-title">
+                        <label for="floatingInputValue">Hypertext</label>
+                    </form>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Short Description</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mb-4">
+        <a href="@Url.Action("Post", "AddArticle")" class="btn btn-sm btn-primary px-5 mx-3 rounded-pill">LƯU</a>
+        <a href="@Url.Action("Index", "AddArticle")" class="btn btn-sm btn-secondary px-5 rounded-pill">HỦY</a>
+    </div>
+</div>

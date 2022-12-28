@@ -1,0 +1,48 @@
+﻿@model CDExcellent.Models.AddDistributor
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutDashboardAdmin.cshtml";
+}
+
+<div class="container-md">
+    <h4>Details Distributor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+    </dl>
+    <a href="@Url.Action("Edit", "AddDistributor", new { id = Model.ID })" class="btn btn-sm btn-success px-4 m-3 rounded-pill">Edit</a>
+    <a href="@Url.Action("Index", "AddDistributor")" class="btn btn-sm btn-dark px-4 rounded-pill">Back</a>
+</div>
+

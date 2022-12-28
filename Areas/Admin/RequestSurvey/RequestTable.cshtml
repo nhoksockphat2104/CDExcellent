@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "RequestTable";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutDashboardAdmin.cshtml";
+}
+
+<h2>Gửi Yêu Cầu Khảo Sát</h2>
+<div class="container-lg">
+    <div class="mb-3 col-11">
+        <label for="formGroupExampleInput" class="form-label">Bài khảo sát</label>
+        <input type="text" class="form-control" id="formGroupExampleInput">
+    </div>
+    <div class="mb-3 col-11">
+        <label for="formGroupExampleInput2" class="form-label">Bộ câu hỏi</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2">
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+            <label for="formGroupExampleInput2" class="form-label">Ngày bắt đầu</label>
+            <input type="date" class="form-control" id="formGroupExampleInput2">
+        </div>
+        <div class="col-3">
+            <label for="formGroupExampleInput2" class="form-label">Ngày kết thúc</label>
+            <input type="date" class="form-control" id="formGroupExampleInput2">
+        </div>
+    </div>
+</div>
+
+
+<h5 class="container-lg mt-3">Danh sách người thực hiện</h5>
+<div class="d-flex">
+    <div class="p-2 flex-grow-1"></div>
+    <div class="p-2"><a href="#" class="btn btn-sm btn-secondary px-5">Import</a></div>
+    <div class="p-2"><a href="#" class="btn btn-sm btn-secondary px-5">Delete</a></div>
+</div>
+
+<table class="table table-striped container-sm table-bordered">
+    <thead>
+        <tr>
+            <th style="width:20px;" class="text-center"><input type="checkbox" name="checkId" /></th>
+            <th>Tên</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tr>
+        <td style="width:20px" class="text-center"><input type="checkbox" name="checkId" /></td>
+        <td>Hoàng Văn Phát</td>
+        <td>abc123@gmail.com</td>
+    </tr>
+    <tr>
+        <td style="width:20px" class="text-center"><input type="checkbox" name="checkId" /></td>
+        <td>Hoàng Văn Phát</td>
+        <td>abc123@gmail.com</td>
+    </tr>
+    <tr>
+        <td style="width:20px" class="text-center"><input type="checkbox" name="checkId" /></td>
+        <td>Hoàng Văn Phát</td>
+        <td>abc123@gmail.com</td>
+    </tr>
+    <tr>
+        <td style="width:20px" class="text-center"><input type="checkbox" name="checkId" /></td>
+        <td>Hoàng Văn Phát</td>
+        <td>abc123@gmail.com</td>
+    </tr>
+    <tr>
+        <td style="width:20px" class="text-center"><input type="checkbox" name="checkId" /></td>
+        <td>Hoàng Văn Phát</td>
+        <td>abc123@gmail.com</td>
+    </tr>
+    <tr>
+        <td style="width:20px" class="text-center"><input type="checkbox" name="checkId" /></td>
+        <td>Hoàng Văn Phát</td>
+        <td>abc123@gmail.com</td>
+    </tr>
+</table>
+
+<h5 class="container-lg mt-3">Thêm cập nhật thông tin người nhận</h5>
+<div class="container-md">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput">
+        <label for="floatingInput">Tên</label>
+    </div>
+    <div class="form-floating">
+        <input type="email" class="form-control" id="floatingEmail">
+        <label for="floatingEmail">Email</label>
+    </div>
+    <div class="row mt-3">
+        <div class="col text-end">
+            <input type="reset" value="Xoá" class="btn btn-sm btn-secondary px-5" />
+        </div>
+        <div class="col">
+            <a href="@Url.Action("SurveyList", "RequestSurvey")" class="btn btn-sm btn-primary px-5">Cập nhật</a>
+        </div>
+    </div>
+</div>
+
